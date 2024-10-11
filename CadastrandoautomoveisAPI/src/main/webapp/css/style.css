@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro Sucesso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #a8e0ff, #f9f9f9); /* Gradiente suave de azul claro a branco */
+            color: #333; /* Texto escuro */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza o conteúdo horizontalmente */
+            justify-content: center; /* Centraliza o conteúdo verticalmente */
+            height: 100vh; /* Preenche a altura da tela */
+        }
+        h1, h2, p {
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */
+            padding: 10px; /* Espaçamento interno */
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            animation: fadeIn 1s; /* Animação de entrada */
+            margin: 10px 0; /* Margem entre os elementos */
+            width: 80%; /* Largura dos textos */
+            text-align: center; /* Centraliza o texto dentro dos elementos */
+        }
+        h1 {
+            color: #4CAF50; /* Verde para o título */
+            animation-delay: 0s; /* Sem atraso */
+        }
+        h2 {
+            color: #555; /* Um tom mais escuro para o subtítulo */
+            animation-delay: 0.5s; /* Atraso para o subtítulo */
+        }
+        p {
+            font-size: 18px; /* Tamanho da fonte dos parágrafos */
+            animation-delay: 1s; /* Atraso para os parágrafos */
+        }
+        strong {
+            color: #4CAF50; /* Verde para destacar rótulos */
+        }
+        a {
+            display: inline-block;
+            background-color: #4CAF50; /* Botão verde */
+            color: white; /* Texto branco */
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px; /* Bordas arredondadas */
+            margin-top: 20px;
+            animation: fadeIn 1.5s; /* Animação de entrada */
+        }
+        a:hover {
+            background-color: #45a049; /* Tom mais escuro ao passar o mouse */
+        }
+
+        /* Animação de fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* Começa invisível */
+                transform: translateY(20px); /* Move para baixo */
+            }
+            to {
+                opacity: 1; /* Torna-se visível */
+                transform: translateY(0); /* Volta à posição original */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro realizado com sucesso!</h1>
+    <h2>Dados coletados:</h2>
+
+    <p><strong>Nome:</strong> <%= request.getParameter("name") %></p>
+    <p><strong>CPF:</strong> <%= request.getParameter("cpf") %></p>
+    <p><strong>Modelo do Carro:</strong> <%= request.getParameter("nameCar") %></p>
+    <p><strong>Marca:</strong> <%= request.getParameter("marca") %></p>
+    <p><strong>Cor:</strong> <%= request.getParameter("cor") %></p>
+    <p><strong>Placa:</strong> <%= request.getParameter("placa") %></p>
+    <p><strong>Chassi:</strong> <%= request.getParameter("chassi") %></p>
+
+    <a href="index.jsp">Voltar ao formulário</a>
+</body>
+</html>
